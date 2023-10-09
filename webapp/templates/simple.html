@@ -1,14 +1,32 @@
 <html>
-    <body bgcolor=#d4a3ae>
-        <center>
-        <h1> IRIS FLOWER DETECTION </h1><br>
+    <body bgcolor=#d4c2a3>
+        <pre>
+
+
+        Demo #1 - Simple Linear Regression Model (1/2)
+
+
+        This app demonstrates how to use a simple linear regression model.
+        
+        It uses the model built by 'simple_linear_regression.ipynb'
+        - location: /regression/continuous/linear/simple_linear_regression.ipynb
+        
+        The model is 'simple_linear_regression_model.pkl'
+        - location: /data/simple_linear_regression_model.pkl
+
+        The process follows the steps below:
+        1. Put the amount of radio promotion budget.
+        2. Send the request to the linear regression model.
+           Click 'predict!'' button
+        3. Forward the result page to show the prediction from the model.
+
+
+        Equation of the model:
+        sales (USD) = 8.1733 * promotion budget (USD) + 41.5326
         <form method="POST", action="{{url_for('simple')}}">
-            Radio Budget :  <input type="text", name='radio_budget', placeholder="Put the budget of Radio promotion"> <br><br>
-            <input type="submit" , value='predict!' >
+        Radio Budget (USD):  <input type="text", name='radio_budget', placeholder="put the promo budget of radio"> <br><br>
+        <input type="submit" , value='predict!' >
         </form>       
-<!--        
-        <img src='static\flower1.jpg' alt="flower">
--->
-        </center>
+        </pre>
     </body>
 </html>
