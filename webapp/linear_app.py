@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template('simple.html')
+    return render_template('simple_linear_req.html')
 
 
 @app.route('/simple/', methods=['POST'])
@@ -38,7 +38,7 @@ def simple():
         df['sales'] = prediction
         df = df.rename(columns={'Radio': 'budget'})
         results = df.to_html(index=False, justify='left', border=0)
-        return render_template('simple_after.html', output=results)
+        return render_template('simple_linear_res.html', output=results)
 
 
 if __name__ == '__main__':
