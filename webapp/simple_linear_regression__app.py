@@ -6,8 +6,9 @@ import pandas as pd
 import joblib
 import json
 
-modelfile = Path(__file__).parent/'../data/simple_linear_regression_model.pkl'
-model = joblib.load(modelfile)
+simple_linear_object = Path(__file__).parent / \
+    '../data/simple_linear_regression_model.pkl'
+simple_model = joblib.load(simple_linear_object)
 
 app = Flask(__name__)
 
@@ -24,7 +25,7 @@ def simple():
         dict = request.get_json(silent=True)
         df = pd.DataFrame(dict)
 
-        prediction = model.predict(df)
+        prediction = simple_model.predict(df)
         results = prediction.to_dict()
         return results, 200
     else:
@@ -33,9 +34,9 @@ def simple():
         dict = {'Radio': [radio]}
         df = pd.DataFrame(dict, dtype=float)
 
-        prediction = model.predict(df)
-        df['sales'] = prediction
-        df = df.rename(columns={'Radio': 'budget'})
+        prediction = simple_model.predict(df)
+        df['sales($)'] = prediction
+        df = df.rename(columns={'Radio': 'radio($)'})
         results = df.to_html(index=False, justify='left', border=0)
         return render_template('simple_linear_res.html', output=results)
 

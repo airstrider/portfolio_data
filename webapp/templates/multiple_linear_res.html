@@ -10,13 +10,17 @@
     <pre>
 
 
-        Demo #1 - Simple Linear Regression Model (2/2)
+        Demo #2 - Multiple Linear Regression Model (2/2)
 
 
         Equation of the model:
         --------------------------------------
-        sales($) = 8.1733 * radio($) + 41.5326
+        sales($) = -152.0897 * tv_low($)    +
+                    -73.4835 * tv_medium($) + 
+                      2.8864 * radio($)     + 
+                    217.6367   (default: tv_high)
         --------------------------------------
+
 
         Prediction 
         {{ output | safe }}

@@ -22,9 +22,11 @@
 
 
         Equation of the model:
-        sales (USD) = 8.1733 * promotion budget (USD) + 41.5326
+        --------------------------------------
+        sales($) = 8.1733 * radio($) + 41.5326
+        --------------------------------------
         <form method="POST", action="{{url_for('simple')}}">
-        Radio Budget (USD):  <input type="text", name='radio_budget', placeholder="put the promo budget of radio"> <br><br>
+        radio($):  <input type="text", name='radio_budget', placeholder="put the promo budget of radio"> <br><br>
         <input type="submit" , value='predict!' >
         </form>       
         </pre>
