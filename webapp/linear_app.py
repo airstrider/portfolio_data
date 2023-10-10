@@ -17,7 +17,7 @@ def main():
     return render_template('simple_linear_req.html')
 
 
-@app.route('/simple/', methods=['POST'])
+@app.route('/linear/simple', methods=['POST'])
 def simple():
     if request.is_json:
         # REST API (JSON)
