@@ -1,0 +1,8 @@
+curl --request POST \
+  --url http://127.0.0.1:9091/linear/multiple \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/8.2.0' \
+  --data '{
+	"TV": ["High","Medium","Low"],
+	"Radio": [0,0,0]
+}'

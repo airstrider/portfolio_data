@@ -1,0 +1,10 @@
+curl --request POST \
+  --url http://127.0.0.1:9092/predict \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/8.1.0' \
+  --data '{
+	"sepal_length": 6.7,
+	"sepal_width": 3.0,
+	"petal_length": 5.2,
+	"petal_width": 2.3
+}'
