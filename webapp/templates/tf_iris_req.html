@@ -1,0 +1,32 @@
+<html>
+    <body bgcolor=#d4a3d2>
+    <pre>
+
+
+    Demo #3 - Tensorflow Classification Model (1/2)
+
+
+    This app demonstrates how to use a Tensorflow model.
+    
+    It uses the model built by 'iris.py'
+    - location: /tensorflow/iris.py
+    
+    The model is 'tensorflow-iris.h5'
+    - location: /data/tensorflow-iris.h5
+
+    The process follows the steps below:
+    1. Put the 4 characteristic values to identify the kind of iris.
+    2. Send the request to the linear regression model.
+        Click 'predict!'' button
+    3. Forward the result page to show the prediction from the model.
+
+    <form method="POST", action="{{url_for('predict')}}">
+    Sepal Length: <input type="text", name='sepal_length', placeholder="enter the value">
+    Sepal Width:  <input type="text", name='sepal_width',  placeholder="enter the value">
+    Petal Length: <input type="text", name='petal_length', placeholder="enter the value">
+    Petal Width:  <input type="text", name='petal_width',  placeholder="enter the value">
+    <input type="submit" , value='predict!' >
+    </form>
+    </pre>
+    </body>
+</html>
