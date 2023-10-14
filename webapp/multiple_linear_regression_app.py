@@ -7,7 +7,7 @@ import joblib
 import json
 
 multiple_linear_object = Path(__file__).parent / \
-    '../data/multiple_linear_regression_model.pkl'
+    '../model/multiple_linear_regression_model.pkl'
 multiple_model = joblib.load(multiple_linear_object)
 
 app = Flask(__name__)

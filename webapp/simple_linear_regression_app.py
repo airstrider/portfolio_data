@@ -7,7 +7,7 @@ import joblib
 import json
 
 simple_linear_object = Path(__file__).parent / \
-    '../data/simple_linear_regression_model.pkl'
+    '../model/simple_linear_regression_model.pkl'
 simple_model = joblib.load(simple_linear_object)
 
 app = Flask(__name__)
