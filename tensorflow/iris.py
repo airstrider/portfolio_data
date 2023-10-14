@@ -38,7 +38,7 @@ def solution_model():
     model.compile(optimizer='adam',
                   loss='categorical_crossentropy', metrics=['acc'])
 
-    checkpoint_path = 'portfolio_data/data/temp_checkpoint.ckpt'
+    checkpoint_path = '../model/temp_checkpoint.ckpt'
     checkpoint = ModelCheckpoint(filepath=checkpoint_path,
                                  save_weights_only=True,
                                  save_best_only=True,
@@ -56,4 +56,4 @@ def solution_model():
 
 if __name__ == '__main__':
     model = solution_model()
-    model.save('portfolio_data/data/tensorflow-iris.h5')
+    model.save('../model/tensorflow-iris.h5')

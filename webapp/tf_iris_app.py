@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import json
 
-tensorflow_object = '../data/tensorflow-iris.h5'
+tensorflow_object = '../model/tensorflow-iris.h5'
 model = tf.keras.models.load_model(tensorflow_object)
 print(model)
 app = Flask(__name__)

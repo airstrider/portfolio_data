@@ -2,5 +2,9 @@
     "files.associations": {
         "*.gradle": "java",
         "plyconfig.json": "jsonc"
-    }
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
 }
