@@ -1,14 +1,9 @@
 from flask import Flask, render_template, request
-from pathlib import Path
-
 import tensorflow as tf
-import pandas as pd
-import numpy as np
-import json
 
 tensorflow_object = '../model/tensorflow-iris.h5'
 model = tf.keras.models.load_model(tensorflow_object)
-print(model)
+
 app = Flask(__name__)
 
 
