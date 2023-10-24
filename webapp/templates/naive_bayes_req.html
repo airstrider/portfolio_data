@@ -1,0 +1,34 @@
+<html>
+    <body bgcolor=#d4a3d2>
+    <pre>
+
+
+    Demo #4 - Naive Bayes Model (1/2)
+
+
+    This app demonstrates how to use a naive bayes classification model.
+    
+    It uses the model built by 'naive_bayes.ipynb'
+    - location: /machine_learining/naive_bayes.ipynb
+
+    The original dataset is from the link below.
+    - https://www.kaggle.com/datasets/himanshunakrani/naive-bayes-classification-data
+
+    The model is 'naive_bayes.pkl'
+    - location: /model/naive_bayes.pkl
+
+    The process follows the steps below:
+    1. Put the glucose and bloodpressure values.
+    2. Send the request to the naive bayes model.
+       Click 'predict!' button
+    3. Forward the result page to show the prediction from the model.
+
+
+    <form method="POST", action="{{url_for('bayes')}}">
+    glucose:        <input type="text", name='glucose', placeholder="put the glucose value">
+    bloodpressure:  <input type="text", name='bloodpressure', placeholder="put the bloodpressure value"> <br><br>
+    <input type="submit" , value='predict!' >
+    </form>       
+    </pre>
+    </body>
+</html>
