@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>My website</title>
+    </head>
+    <body bgcolor=#d4a3d2>
+        <pre>
+        <div>
+            Go to:
+            <a href="{{ url_for('index_func') }}">Home</a>
+            <a href="{{ url_for('simple_req') }}">Simple</a>
+            <a href="{{ url_for('multiple_req') }}">Multiple</a>
+            <a href="{{ url_for('naive_bayes_req') }}">Naive Bayes</a>
+            <a href="{{ url_for('tf_iris_req') }}">TF_Iris</a>
+        </div>
+        {% block content %}{% endblock %}
+        </pre>
+    </body>
+</html>
